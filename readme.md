@@ -62,10 +62,10 @@ Try this out
 
 ### look..
 
-- you put the local proxy in your system and install its certicate
+- you run the local proxy in your system and install its certicate
 - your system passes everything to this local proxy
-- now this proxy changes the domain of the requests from `example.github` to `YourTunnel.loca.lt`
-- now `YourTunnel.loca.lt` makes the request for you and calls `example.github` and returns the response
+- now this proxy changes the domain of the requests for example from `example.github` to `YourTunnel.loca.lt`
+- now middleware running on `YourTunnel.loca.lt` makes the request for you and calls `example.github` and returns the response
 
 #### Did you make a request to example.github ?
 
