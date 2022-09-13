@@ -8,7 +8,7 @@ ProxyAsVpn redirects all requests to your middleware server to make the requests
 - for middleware server , run `npm run server`
 - for local system proxy , run `npm run sysproxy`
 
-## Server
+## Server `npm run server`
 
 ```node server.js
 
@@ -18,7 +18,7 @@ Example app listening on port 3000!
 
 #####
 
-put below url in "proxies" array
+put below url in "proxyServer" in config.js
 or use your server url provided by your hosting service
 
 
@@ -51,6 +51,10 @@ config = {
 Server running on port 8081
 IF THIS IS FIRST TIME LAUNCING ..
  install MOCKHTTP.crt file in your system"
+
+
+Try this out
+ https://www.google.com/search?q=what%27s+my+ip
 
 ```
 
