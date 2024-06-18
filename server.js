@@ -1,11 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const localtunnel = require('localtunnel');
 
-const {
-  createProxyMiddleware,
-  responseInterceptor,
-} = require('http-proxy-middleware');
+const { createProxyMiddleware, responseInterceptor } = require('http-proxy-middleware');
 
 const app = express();
 app.use(cors());
@@ -52,19 +48,10 @@ process
   });
 
 (async function makeMeTunnel() {
-  const tunnel = await localtunnel({ port: 3000 });
-
   // the assigned public url for your tunnel
   // i.e. https://abcdefgjhij.localtunnel.me
 
-  console.log(
-    '\n#####\n\nPut below url in  "proxies" array\nor use your server url provided by your hosting service\n'
-  );
+  console.log('\n#####\n\nPut below url in  "proxies" array\nor use your server url provided by your hosting service\n');
 
-  console.log('localtunnel server > ', tunnel.url.replace('https://', ''));
-
-  tunnel.on('close', () => {
-    console.log('TUNNEL CLOSED ,.. NEW ONE COMING RIGHT UP !');
-    return makeMeTunnel();
-  });
+  console.log('localtunnel server > http://localhost:3000');
 })();
